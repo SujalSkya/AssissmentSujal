@@ -1,0 +1,19 @@
+{
+  "name": "AutomationAssisnment",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "login": "npx cypress run --spec ./cypress/e2e/login/ --browser chrome --headed",
+    "register": "npx cypress run --spec ./cypress/e2e/register/ --browser chrome --headed",
+    "article": "npx cypress run --spec ./cypress/e2e/article/ --browser chrome --headed",
+    "e2e": "npx cypress run --spec ./cypress/e2e/ --browser chrome --headed"
+  },
+  "author": "sujal",
+  "license": "ISC",
+  "devDependencies": {
+    "@faker-js/faker": "^7.6.0",
+    "cypress": "^12.0.1"
+  }
+}

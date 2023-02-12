@@ -1,0 +1,21 @@
+{
+    "valid_userdata": [
+        {
+            "email": "sujal@test.com",
+            "password": "sujal@test"
+        }
+    ],
+
+    "invalid_userdata": [
+        {
+            "email": "sujal@test.com"
+        },
+        {
+            "password": "sujal@test"
+        },
+        {
+            "email": "sujal@test.com",
+            "password": "SUJAL@TEST"
+        }
+    ]
+}
