@@ -1,0 +1,51 @@
+{
+    "valid_userdata": [
+        {
+            "username": "AbcdTest",
+            "email":"abcd@test.com",
+            "password": "test123"
+        }
+    ],
+    "invalid_userdata": [
+        {
+            "username": "",
+            "email":"qwe@try.com",
+            "password": "qwe123"
+        },
+        {
+            "username": "QweRTY",
+            "email":"",
+            "password": "qwe123"
+        },
+        {
+            "username": "xyzxyz",
+            "email":"xyz@test.com",
+            "password": ""
+        },
+        {
+            "username": "",
+            "email":"xyz@test.com",
+            "password": ""
+        },
+        {
+            "username": "xyzxyz",
+            "email":"xyz@test.com",
+            "password": ""
+        },
+        {
+            "username": "xyzxyz",
+            "email":"xyz@test.com",
+            "password": ""
+        },
+        {
+            "username": "xyzxyz",
+            "email":"xyz@test.com",
+            "password": ""
+        },
+        {
+            "username": "xyzxyz",
+            "email":"xyz@test.com",
+            "password": ""
+        }
+    ]
+}
