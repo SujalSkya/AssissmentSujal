@@ -7,33 +7,30 @@ describe("Login Test Suite", () => {
     const login = new Login();
 
     // Valid login test case
-    context("Valid Login Scenario", () => {
-        it("Valid login test scenario", () => {
-            cy.visit("/");
-            login.LoginBtn().click();
-            cy.url({ timeout: 15000 }).should("eq", Cypress.config("baseUrl") + "/user/login");
-            cy.fixture('logindata').then(data => {
-                login.Email().type(data.valid_userdata[0].email);
-                login.Password().type(data.valid_userdata[0].password);
-                login.SignInButton().click();
-                login.CheckLogin();
-            }
-            );
-        });
+    it("Valid login test scenario", () => {
+        cy.visit("/");
+        login.LoginBtn().click();
+        cy.url({ timeout: 15000 }).should("eq", Cypress.config("baseUrl") + "/user/login");
+        cy.fixture('logindata').then(data => {
+            login.Email().type(data.valid_userdata[0].email);
+            login.Password().type(data.valid_userdata[0].password);
+            login.SignInButton().click();
+            login.CheckLogin();
+        }
+        );
     });
 
     // Invalid login test cases
-    context("Invalid Login Scenario", () => {
-        it("Invalid login with null password scenario", () => {
-            cy.visit("/");
-            login.LoginBtn().click();
-            cy.url({ timeout: 15000 }).should("eq", Cypress.config("baseUrl") + "/user/login");
-            cy.fixture('logindata').then(data => {
-                login.Email().type(data.invalid_userdata[0].email);
-                login.SignInButton().click();
-                login.ValidationMessage().should("contain.text", "password can't be blank")
-            });
+    it("Invalid login with null password scenario", () => {
+        cy.visit("/");
+        login.LoginBtn().click();
+        cy.url({ timeout: 15000 }).should("eq", Cypress.config("baseUrl") + "/user/login");
+        cy.fixture('logindata').then(data => {
+            login.Email().type(data.invalid_userdata[0].email);
+            login.SignInButton().click();
+            login.ValidationMessage().should("contain.text", "password can't be blank")
         });
+    });
 
         it("Invalid login with null email scenario", () => {
             cy.visit("/");
@@ -66,4 +63,4 @@ describe("Login Test Suite", () => {
             });
         });
     });
-});
+

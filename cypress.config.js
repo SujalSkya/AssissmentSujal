@@ -6,6 +6,7 @@ module.exports = defineConfig({
       // implement node event listeners here
     },
     baseUrl: "https://next-realworld.vercel.app",
+    baseUri: "https://api.realworld.io/api",
     chromeWebSecurity: false
   },
   "video": false

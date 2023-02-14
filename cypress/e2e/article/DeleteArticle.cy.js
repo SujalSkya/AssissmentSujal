@@ -9,13 +9,11 @@ describe("Delete article", () => {
         cy.Login();
     });
 
-    // Valid Create Article Test Case
-    context("Valid delete update", () => {
-        it("Delete article positive scenario", () => {
-            RemoveArticle.Profile().click();
-            RemoveArticle.ArticleOne().click();
-            RemoveArticle.DeleteArticle().click();
-            RemoveArticle.GlobalActive();
-        });
+    it("Delete article positive scenario", () => {
+        RemoveArticle.Profile().click();
+        RemoveArticle.ArticleOne().click();
+        RemoveArticle.DeleteArticle().click();
+        RemoveArticle.GlobalActive();
     });
 });
+
