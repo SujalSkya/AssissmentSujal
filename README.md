@@ -7,10 +7,10 @@ git clone https://github.com/SujalSkya/AssissmentSujal.git
 
 Open the cloned repository and open terminal in VSCode and enter  the following command : <code> <b>npm i </b></code> </br></br>
 
-<h2>prerequisite</h2></br>
+<h2>prerequisite</h2>
 <ul>
 <li> node js </li>
-</ul>
+</ul></br>
 
 Execution:</br>
 To run the automation script use following command:</br></br>
